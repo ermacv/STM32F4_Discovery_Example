@@ -20,6 +20,6 @@ target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/tim
 target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/portable/MemMang/heap_4.c)
 target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/port.c)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/include)
-target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/portable/GCC/ARM_CM4F)
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/FreeRTOS-Kernel/portable/GCC/ARM_CM4F)
 target_link_libraries(${PROJECT_NAME} PUBLIC FreeRTOS_Config)
 ###############################################################################
