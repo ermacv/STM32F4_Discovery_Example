@@ -461,9 +461,11 @@
 #endif /* HAL_MMC_MODULE_ENABLED */
 
 /* Exported macro ------------------------------------------------------------*/
-
-#include "app_assert.h"
-#define assert_param(expr) if ((expr) == 0) {app_assert(__func__, __FILE__, __LINE__); for( ;; );}
+#ifdef  USE_FULL_ASSERT
+  #include "stm32_assert.h"
+#else
+  #define assert_param(expr) ((void)0U)
+#endif /* USE_FULL_ASSERT */
 
 #ifdef __cplusplus
 }
