@@ -13,5 +13,5 @@ project(HAL_Config)
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME} INTERFACE CMSIS_STM32F4xx_GCC)
-target_link_libraries(${PROJECT_NAME} INTERFACE app_assert)
+target_link_libraries(${PROJECT_NAME} INTERFACE stm32_assert)
 ###############################################################################
