@@ -17,4 +17,5 @@ target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Source/startup_stm3
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/Include)
 target_compile_definitions(${PROJECT_NAME} PUBLIC STM32F407xx)
 target_link_libraries(${PROJECT_NAME} PUBLIC CMSIS_Core)
+target_compile_definitions(${PROJECT_NAME} PUBLIC HSE_VALUE=8000000)
 ###############################################################################
