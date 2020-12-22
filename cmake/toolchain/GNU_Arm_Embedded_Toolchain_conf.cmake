@@ -1,10 +1,10 @@
 ###############################################################################
 # Check for env variable where compiler is placed 
-if(DEFINED ENV{WOODENSHARK_TEST})
-	set(COMP_ENV_PATH $ENV{WOODENSHARK_TEST} CACHE INTERNAL "WOODENSHARK_TEST path")
+if(DEFINED ENV{ARM_GCC_COMPILER_DIR})
+	set(COMP_ENV_PATH $ENV{ARM_GCC_COMPILER_DIR} CACHE INTERNAL "ARM_GCC_COMPILER_DIR path")
 	# Replace backslashes to slashes
 	string(REPLACE "\\" "/" COMP_ENV_PATH ${COMP_ENV_PATH})
-	set(COMP_ENV_PATH "${COMP_ENV_PATH}/")
+	set(COMP_ENV_PATH "${COMP_ENV_PATH}")
 endif()
 ###############################################################################
 # Set compiler extension. Depends on current host system.
@@ -16,5 +16,5 @@ endif()
 ###############################################################################
 set(TARGET_TRIPLET "arm-none-eabi" CACHE INTERNAL "ARM GCC Toolchain target triplet")
 
-set(COMPILER_BIN "${COMP_ENV_PATH}" CACHE INTERNAL "GCC Compiler Path")
+set(COMPILER_BIN "${COMP_ENV_PATH}/bin/" CACHE INTERNAL "GCC Compiler Path")
 ###############################################################################
